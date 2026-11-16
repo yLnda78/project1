@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tentang | Jeda Sejenak</title>
+  <meta name="description" content="Cerita Jeda Sejenak: cafe industrial untuk mahasiswa dengan Wi-Fi stabil, colokan di meja, dan jam buka sampai malam.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Lewati ke konten</a>
+
+  <!-- NAVBAR: sama di semua halaman. Yang beda hanya class="active" -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html" aria-label="Jeda Sejenak, ke beranda">
+        <span class="pause" aria-hidden="true"><i></i><i></i></span>Jeda Sejenak
+      </a>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html" class="active" aria-current="page">Tentang</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Galeri</a></li>
+        <li><a href="location.html">Lokasi</a></li>
+        <li><a class="btn" href="contact.html">Kontak</a></li>
+      </ul>
+        <button class="bag-btn" type="button" aria-label="Buka tas pesanan" data-bag-open>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="bag-count" data-bag-count hidden>0</span>
+        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- PAGE HEADER (hero kecil untuk halaman dalam) -->
+    <section class="page-header">
+      <div class="wrap">
+        <p class="crumb"><a href="index.html">Beranda</a> / Tentang</p>
+        <h1 class="page-title">Tentang</h1>
+        <p class="page-lead">Cerita di balik cafe yang dibuat untuk berhenti sebentar.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <p class="pull-quote">Bukan tempat untuk buru-buru. Tempat untuk bernapas.</p>
+        <div class="story">
+          <p>Jeda Sejenak lahir dari satu kebiasaan sederhana: duduk berjam-jam di cafe sambil mengerjakan tugas, lalu merasa tidak enak karena cuma pesan satu gelas.</p>
+          <p>Kami ingin membuat tempat yang sebaliknya. Meja yang lega, kursi yang nyaman untuk duduk lama, dan tidak ada yang melirik jam. Pesan satu kopi, duduk sesukamu.</p>
+          <p>Nama "Jeda Sejenak" datang dari tombol pause yang jadi logo kami. Di antara dua kelas, di antara dua revisi, kadang yang dibutuhkan hanya berhenti sebentar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface">
+      <div class="wrap">
+        <div class="section-head"><h2 class="section-title">Kenapa betah di sini</h2></div>
+        <div class="cols-3">
+          <div><h3>Wi-Fi stabil</h3><p>Cukup kencang untuk kuliah online, rapat kelompok, dan unggah tugas menit terakhir.</p></div>
+          <div><h3>Colokan di meja</h3><p>Hampir setiap meja punya colokan sendiri. Laptop dan HP bisa mengisi daya bersamaan.</p></div>
+          <div><h3>Buka sampai malam</h3><p>Senin sampai Jumat tutup pukul 23.00, Sabtu sampai tengah malam. Cocok untuk yang bekerja paling baik saat malam.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <h2 class="intro-title">Suasana industrial yang hangat.</h2>
+          <p>Beton ekspos, besi hitam, dan bohlam menggantung di atas bar. Dingin di tampilan, hangat di rasa. Siang terang dan tenang, malam lebih ramai dan hidup.</p>
+          <p style="margin-top:1.4rem"><a class="text-link" href="gallery.html">Lihat foto suasananya</a></p>
+        </div>
+        <ul class="facts">
+          <li><strong>Siang</strong><span>Cahaya alami, cocok untuk membaca dan menulis.</span></li>
+          <li><strong>Sore</strong><span>Waktu favorit untuk kerja kelompok.</span></li>
+          <li><strong>Malam</strong><span>Lampu bohlam menyala, musik pelan, suasana ramai.</span></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: sama di semua halaman -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-brand">Jeda Sejenak</p>
+        <p>Kopi, meja, dan waktu untuk berhenti sebentar.</p>
+      </div>
+      <nav aria-label="Navigasi footer">
+        <p class="footer-title">Halaman</p>
+        <ul class="footer-links">
+          <li><a href="about.html">Tentang</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Galeri</a></li>
+          <li><a href="location.html">Lokasi</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-title">Ikuti kami</p>
+        <ul class="footer-links">
+          <li><a href="https://instagram.com/jedasejenak.pku" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://tiktok.com/@jedasejenak.pku" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://wa.me/628975091253" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="wrap copyright">&copy; <span data-year>2026</span> Jeda Sejenak. Dibuat untuk belajar layout website komersial.</p>
+  </footer>
+</body>
+</html>

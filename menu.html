@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu | Jeda Sejenak</title>
+  <meta name="description" content="Daftar menu Jeda Sejenak: kopi, non-kopi, makanan, dan snack dengan harga terjangkau untuk mahasiswa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Lewati ke konten</a>
+
+  <!-- NAVBAR: sama di semua halaman. Yang beda hanya class="active" -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="logo" href="index.html" aria-label="Jeda Sejenak, ke beranda">
+        <span class="pause" aria-hidden="true"><i></i><i></i></span>Jeda Sejenak
+      </a>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="menu.html" class="active" aria-current="page">Menu</a></li>
+        <li><a href="gallery.html">Galeri</a></li>
+        <li><a href="location.html">Lokasi</a></li>
+        <li><a class="btn" href="contact.html">Kontak</a></li>
+      </ul>
+        <button class="bag-btn" type="button" aria-label="Buka tas pesanan" data-bag-open>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="bag-count" data-bag-count hidden>0</span>
+        </button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- PAGE HEADER (hero kecil untuk halaman dalam) -->
+    <section class="page-header">
+      <div class="wrap">
+        <p class="crumb"><a href="index.html">Beranda</a> / Menu</p>
+        <h1 class="page-title">Menu</h1>
+        <p class="page-lead">Pilih, masukin tas, kirim ke WhatsApp. Gitu doang. Harga ramah kantong mahasiswa.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <!-- Gambar tiap menu ada di img/menu/ (nama file = nama menu). Ganti dengan foto asli: simpan foto, lalu ubah src di kartunya. -->
+        <!-- FILTER: tiap tombol punya data-filter yang cocok dengan data-category di kartu -->
+        <ol class="steps" aria-label="Cara pesan">
+          <li><b>1</b> Pilih menu</li>
+          <li><b>2</b> Masukin tas</li>
+          <li><b>3</b> Kirim ke WhatsApp</li>
+        </ol>
+        <div class="filters" role="group" aria-label="Filter kategori menu">
+          <button class="chip" data-filter="semua" aria-pressed="true">Semua</button>
+          <button class="chip" data-filter="kopi" aria-pressed="false">☕ Kopi</button>
+          <button class="chip" data-filter="non-kopi" aria-pressed="false">🧋 Non-kopi</button>
+          <button class="chip" data-filter="makanan" aria-pressed="false">🍚 Makanan</button>
+          <button class="chip" data-filter="snack" aria-pressed="false">🍟 Snack</button>
+        </div>
+        <p class="menu-count" id="menu-count" aria-live="polite">Menampilkan 13 menu</p>
+
+        <div class="menu-grid">
+        <article class="menu-card" data-id="kopi-susu-jeda" data-name="Kopi Susu Jeda" data-price="22000" data-img="img/menu/kopi-susu-jeda.svg" data-category="kopi">
+          <div class="menu-card-img"><img src="kopisusu.jpeg" alt="Kopi Susu Jeda" width="400" height="300" loading="lazy"></div>
+          <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Kopi Susu Jeda</h3><span class="price">Rp 22.000</span></div>
+          <p>Espresso, susu segar, gula aren. Dingin atau panas.</p>
+          <div class="menu-card-foot"><span class="menu-tag">☕ Kopi</span><button class="btn-add" type="button" data-add aria-label="Tambah Kopi Susu Jeda ke tas"><span aria-hidden="true">+</span> <span class="add-label">Tambah</span></button></div>
+                  </div>
+        </article>
+        <article class="menu-card" data-id="americano-beton" data-name="Americano Beton" data-price="18000" data-img="img/menu/americano-beton.svg" data-category="kopi">
+          <div class="menu-card-img"><img src="americabeton.jpeg" alt="Americano Beton" width="400" height="300" loading="lazy"></div>
+          <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Americano Beton</h3><span class="price">Rp 18.000</span></div>
+          <p>Espresso pekat dan air, tanpa gula. Untuk yang harus melek.</p>
+          <div class="menu-card-foot"><span class="menu-tag">☕ Kopi</span><button class="btn-add" type="button" data-add aria-label="Tambah Americano Beton ke tas"><span aria-hidden="true">+</span> <span class="add-label">Tambah</span></button></div>
+                  </div>
+        </article>
+        <article class="menu-card" data-id="cappuccino" data-name="Cappuccino" data-price="24000" data-img="img/menu/cappuccino.svg" data-category="kopi">
+          <div class="menu-card-img"><img src="cappucino.jpeg" alt="Cappuccino" width="400" height="300" loading="lazy"></div>
+          <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Cappuccino</h3><span class="price">Rp 24.000</span></div>
+          <p>Espresso dengan susu steam dan busa tebal.</p>
+          <div class="menu-card-foot"><span class="menu-tag">☕ Kopi</span><button class="btn-add" type="button" data-add aria-label="Tambah Cappuccino ke tas"><span aria-hidden="true">+</span> <span class="add-label">Tambah</span></button></div>
+                  </div>
+        </article>
+        <article class="menu-card" data-id="vietnam-drip" data-name="Vietnam Drip" data-price="25000" data-img="img/menu/vietnam-drip.svg" data-category="kopi">
+          <div class="menu-card-img"><img src="vietnamdrip.jpeg" alt="Vietnam Drip" width="400" height="300" loading="lazy"></div>
+          <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Vietnam Drip</h3><span class="price">Rp 25.000</span></div>
+          <p>Kopi tetes dengan susu kental manis, manis dan pekat.</p>
+          <div class="menu-card-foot"><span class="menu-tag">☕ Kopi</span><button class="btn-add" type="button" data-add aria-label="Tambah Vietnam Drip ke tas"><span aria-hidden="true">+</span> <span class="add-label">Tambah</span></button></div>
+                  </div>
+        </article>
+        <article class="menu-card" data-id="matcha-latte" data-name="Matcha Latte" data-price="26000" data-img="img/menu/matcha-latte.svg" data-category="non-kopi">
+          <div class="menu-card-img"><img src="vietnamdrip.jpeg" alt="Matcha Latte" width="400" height="300" loading="lazy"></div>
+          <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Matcha Latte</h3><span class="price">Rp 26.000</span></div>
+          <p>Matcha dan susu, lembut dan tidak terlalu manis.</p>
+          <div class="menu-card-foot"><span class="menu-tag">🧋 Non-kopi</span><button class="btn-add" type="button" data-add aria-label="Tambah Matcha Latte ke tas"><span aria-hidden="true">+</span> <span class="add-label">Tambah</span></button></div>
+                  </div>
+        </article>
+        <article class="menu-card" data-id="cokelat-panas" data-name="Cokelat Panas" data-price="23000" data-img="img/menu/cokelat-panas.svg" data-category="non-kopi">
+          <div class="menu-card-img"><img src="coklatpanas.jpeg" alt="Cokelat Panas" width="400" height="300" loading="lazy"></div>
+          <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Cokelat Panas</h3><span class="price">Rp 23.000</span></div>
+          <p>Cokelat pekat dengan susu. Cocok untuk malam hujan.</p>
+          <div class="menu-card-foot"><span class="menu-tag">🧋 Non-kopi</span><button class="btn-add" type="button" data-add aria-label="Tambah Cokelat Panas ke tas"><span aria-hidden="true">+</span> <span class="add-label">Tambah</span></button></div>
+                  </div>
+        </article>
+        <article class="menu-card" data-id="teh-lemon-dingin" data-name="Teh Lemon Dingin" data-price="16000" data-img="img/menu/teh-lemon-dingin.svg" data-category="non-kopi">
+          <div class="menu-card-img"><img src="lemondingin.jpeg" alt="Teh Lemon Dingin" width="400" height="300" loading="lazy"></div>
+          <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Teh Lemon Dingin</h3><span class="price">Rp 16.000</span></div>
+          <p>Teh seduh, lemon segar, es batu.</p>
+          <div class="menu-card-foot"><span class="menu-tag">🧋 Non-kopi</span><button class="btn-add" type="button" data-add aria-label="Tambah Teh Lemon Dingin ke tas"><span aria-hidden="true">+</span> <span class="add-label">Tambah</span></button></div>
+                  </div>
+        </article>
+        <article class="menu-card" data-id="nasi-ayam-sambal-matah" data-name="Nasi Ayam Sambal Matah" data-price="32000" data-img="img/menu/nasi-ayam-sambal-matah.svg" data-category="makanan">
+          <div class="menu-card-img"><img src="sambalmatah.jpeg" alt="Nasi Ayam Sambal Matah" width="400" height="300" loading="lazy"></div>
+          <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Nasi Ayam Sambal Matah</h3><span class="price">Rp 32.000</span></div>
+          <p>Ayam goreng, nasi hangat, sambal matah segar.</p>
+          <div class="menu-card-foot"><span class="menu-tag">🍚 Makanan</span><button class="btn-add" type="button" data-add aria-label="Tambah Nasi Ayam Sambal Matah ke tas"><span aria-hidden="true">+</span> <span class="add-label">Tambah</span></button></div>
+                  </div>
+        </article>
+        <article class="menu-card" data-id="mie-goreng-jeda" data-name="Mie Goreng Jeda" data-price="28000" data-img="img/menu/mie-goreng-jeda.svg" data-category="makanan">
+          <div class="menu-card-img"><img src="miegoreng.jpeg" alt="Mie Goreng Jeda" width="400" height="300" loading="lazy"></div>
+          <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Mie Goreng Jeda</h3><span class="price">Rp 28.000</span></div>
+          <p>Mie goreng dengan telur, sayur, dan acar.</p>
+          <div class="menu-card-foot"><span class="menu-tag">🍚 Makanan</span><button class="btn-add" type="button" data-add aria-label="Tambah Mie Goreng Jeda ke tas"><span aria-hidden="true">+</span> <span class="add-label">Tambah</span></button></div>
+                  </div>
+        </article>
+        <article class="menu-card" data-id="nasi-telur-balado" data-name="Nasi Telur Balado" data-price="26000" data-img="img/menu/nasi-telur-balado.svg" data-category="makanan">
+          <div class="menu-card-img"><img src="telurbalado.jpeg" alt="Nasi Telur Balado" width="400" height="300" loading="lazy"></div>
+          <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Nasi Telur Balado</h3><span class="price">Rp 26.000</span></div>
+          <p>Telur balado pedas manis dengan nasi hangat.</p>
+          <div class="menu-card-foot"><span class="menu-tag">🍚 Makanan</span><button class="btn-add" type="button" data-add aria-label="Tambah Nasi Telur Balado ke tas"><span aria-hidden="true">+</span> <span class="add-label">Tambah</span></button></div>
+                  </div>
+        </article>
+        <article class="menu-card" data-id="roti-bakar-cokelat-keju" data-name="Roti Bakar Cokelat Keju" data-price="22000" data-img="img/menu/roti-bakar-cokelat-keju.svg" data-category="snack">
+          <div class="menu-card-img"><img src="cokelatkeju.jpeg" alt="Roti Bakar Cokelat Keju" width="400" height="300" loading="lazy"></div>
+          <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Roti Bakar Cokelat Keju</h3><span class="price">Rp 22.000</span></div>
+          <p>Tebal, renyah di luar, lumer di dalam.</p>
+          <div class="menu-card-foot"><span class="menu-tag">🍟 Snack</span><button class="btn-add" type="button" data-add aria-label="Tambah Roti Bakar Cokelat Keju ke tas"><span aria-hidden="true">+</span> <span class="add-label">Tambah</span></button></div>
+                  </div>
+        </article>
+        <article class="menu-card" data-id="kentang-goreng" data-name="Kentang Goreng" data-price="20000" data-img="img/menu/kentang-goreng.svg" data-category="snack">
+          <div class="menu-card-img"><img src="kentanggoreng.jpeg" alt="Kentang Goreng" width="400" height="300" loading="lazy"></div>
+          <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Kentang Goreng</h3><span class="price">Rp 20.000</span></div>
+          <p>Dengan saus sambal dan mayones.</p>
+          <div class="menu-card-foot"><span class="menu-tag">🍟 Snack</span><button class="btn-add" type="button" data-add aria-label="Tambah Kentang Goreng ke tas"><span aria-hidden="true">+</span> <span class="add-label">Tambah</span></button></div>
+                  </div>
+        </article>
+        <article class="menu-card" data-id="pisang-goreng-madu" data-name="Pisang Goreng Madu" data-price="18000" data-img="img/menu/pisang-goreng-madu.svg" data-category="snack">
+          <div class="menu-card-img"><img src="pisangmadu.jpeg" alt="Pisang Goreng Madu" width="400" height="300" loading="lazy"></div>
+          <div class="menu-card-body">
+          <div class="menu-card-top"><h3>Pisang Goreng Madu</h3><span class="price">Rp 18.000</span></div>
+          <p>Pisang kepok goreng, disiram madu.</p>
+          <div class="menu-card-foot"><span class="menu-tag">🍟 Snack</span><button class="btn-add" type="button" data-add aria-label="Tambah Pisang Goreng Madu ke tas"><span aria-hidden="true">+</span> <span class="add-label">Tambah</span></button></div>
+                  </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: sama di semua halaman -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-brand">Jeda Sejenak</p>
+        <p>Kopi, meja, dan waktu untuk berhenti sebentar.</p>
+      </div>
+      <nav aria-label="Navigasi footer">
+        <p class="footer-title">Halaman</p>
+        <ul class="footer-links">
+          <li><a href="about.html">Tentang</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Galeri</a></li>
+          <li><a href="location.html">Lokasi</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-title">Ikuti kami</p>
+        <ul class="footer-links">
+          <li><a href="https://instagram.com/jedasejenak.pku" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://tiktok.com/@jedasejenak.pku" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://wa.me/628975091253" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="wrap copyright">&copy; <span data-year>2026</span> Jeda Sejenak. Dibuat untuk belajar layout website komersial.</p>
+  </footer>
+</body>
+</html>
